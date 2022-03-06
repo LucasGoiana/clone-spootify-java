@@ -1,6 +1,7 @@
 package br.com.clone.spotify.client.album;
 
 
+import br.com.clone.spotify.dto.AlbumDTO;
 import org.apache.hc.core5.http.ParseException;
 import se.michaelthelin.spotify.SpotifyApi;
 import se.michaelthelin.spotify.exceptions.SpotifyWebApiException;
@@ -12,15 +13,11 @@ import java.io.IOException;
 
 public class AlbumSearch {
 
-    static String q = "Pedra Leticia3";
-
-    public static AlbumSimplified[] getAlbums(String accessToken) {
+    public static AlbumSimplified[] getAlbums(AlbumDTO albumDTO, String accessToken) {
         SpotifyApi spotifyApi = new SpotifyApi.Builder()
                 .setAccessToken(accessToken)
                 .build();
-      SearchAlbumsRequest searchAlbumsRequest = spotifyApi.searchAlbums(q)
-//          .limit(5)
-//          .offset(0)
+      SearchAlbumsRequest searchAlbumsRequest = spotifyApi.searchAlbums(albumDTO.getName())
           .build();
         return searchAlbums_Sync(searchAlbumsRequest);
 
@@ -28,8 +25,8 @@ public class AlbumSearch {
 
     public static AlbumSimplified[] searchAlbums_Sync(SearchAlbumsRequest searchAlbumsRequest) {
         try {
-            final Paging<AlbumSimplified> albumSimplifiedPaging = searchAlbumsRequest.execute();
 
+            final Paging<AlbumSimplified> albumSimplifiedPaging = searchAlbumsRequest.execute();
             return albumSimplifiedPaging.getItems();
 
         } catch (IOException | SpotifyWebApiException | ParseException e) {
