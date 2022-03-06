@@ -28,6 +28,12 @@ dependencies {
 	implementation 'se.michaelthelin.spotify:spotify-web-api-java:7.0.0'
 }
 
+allprojects {
+	repositories {
+		maven { url 'https://jitpack.io' }
+	}
+}
+
 tasks.named('test') {
 	useJUnitPlatform()
 }
