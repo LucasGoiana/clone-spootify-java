@@ -1,1 +1,34 @@
+server:
+  port: ${PORT:9999}
+  error:
+    include-message: always
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ApiData?createDatabaseIfNotExist=true
+    username: lucas
+    password: Root@123456
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+  mail:
+    host: email-ssl.com.br
+    port: 465
+    username: EMAILAQUI
+    password: SENHAAQUI
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+          ssl:
+            enable: true
+    test-connection: true
 

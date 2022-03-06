@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "spring.spotify.client_id",
+      "type": "java.lang.String",
+      "description": "Description for spring.spotify.client_id."
+  }
+] }
