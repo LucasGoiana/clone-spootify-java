@@ -11,7 +11,7 @@
 - Conta no Spotify;
 - Gradle;
 - Java; 
-- Na classe Constrants preencher os valores nas variaveis conseguidas em https://developer.spotify.com/documentation/web-api/;
+- Na classe Constrants preencher os valores das variaveis. Informações conseguidas em https://developer.spotify.com/documentation/web-api/;
 
 ## Link GitHub
 
