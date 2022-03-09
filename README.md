@@ -11,10 +11,11 @@
 - Conta no Spotify;
 - Gradle;
 - Java; 
+- Na classe Constrants preencher os valores nas variaveis conseguidas em https://developer.spotify.com/documentation/web-api/;
 
 ## Link GitHub
 
-  <b>Front-End:</b><a href="https://github.com/LucasGoiana/search-albuns-spotify-angular/">Cliquei aqui</a>
+  <b>Front-End:</b><a href="https://github.com/LucasGoiana/search-albuns-spotify-angular/">Cliquei aqui</a><br>
   <b>Back-End:</b> <a href="https://github.com/LucasGoiana/search-albuns-spotify-java/">Cliquei aqui</a>
 # Tema
 Utilizei a api aberta do spotify para integrar um front end angular com uma api java spring.
